@@ -83,7 +83,7 @@ TOTAL2 = round(total_ms(MT2), 3)
 
 
 # 表示 ----------------------------------------
-print('KLM から予測 --------------------------')
+print('KLM から予測 -----------------------------')
 print(total_klm, 'ms')
 print('')
 print('実総入力時間:', real_time, 'ms')
@@ -94,7 +94,7 @@ print('ID:', ID)
 print('予測MT:', MT, 'ms')
 print('予測総入力時間:', TOTAL, 'ms')
 print('')
-print('平均実移動距離 から予測 ------------------')
+print('平均実移動距離 から予測 -------------------')
 print('平均実移動距離:', total_real)
 print('ID:', ID)
 print('予測MT:', MT2, 'ms')
