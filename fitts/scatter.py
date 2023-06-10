@@ -1,3 +1,7 @@
+# 散布図を表示させる。
+# 結果を scatter.png として保存。
+
+
 import csv
 import matplotlib.pyplot as plt
 
@@ -27,7 +31,7 @@ plt.subplots_adjust(bottom=0.15, left=0.15)
 
 
 # 散布図をpngで保存
-plt.savefig('./fitts/scatter_plot.png')
+plt.savefig('./fitts/scatter.png')
 
 f.close()
 plt.show()
