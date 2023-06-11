@@ -1,5 +1,6 @@
 # 散布図と近似曲線を表示させる。
 # 結果を aprroximation.png として保存する。
+# 図２, 3を作成
 
 
 import numpy as np
