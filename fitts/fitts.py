@@ -1,3 +1,6 @@
+# 演習2-1において、条件毎のMTとIDを求めてCSVとして保存
+
+
 import csv
 import os
 import re
