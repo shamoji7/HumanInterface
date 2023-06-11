@@ -96,7 +96,7 @@ print('予測総入力時間:', TOTAL, 'ms')
 print('')
 print('平均実移動距離 から予測 -------------------')
 print('平均実移動距離:', total_real)
-print('ID:', ID)
+print('ID:', ID2)
 print('予測MT:', MT2, 'ms')
 print('予測総入力時間:', TOTAL2, 'ms')
 
