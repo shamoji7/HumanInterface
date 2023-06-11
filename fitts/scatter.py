@@ -1,37 +1,30 @@
-# 散布図を表示させる。
-# 結果を scatter.png として保存。
+# 散布図と近似曲線を表示させる。
+# 結果を aprroximation.png として保存する。
 
 
-import csv
+import numpy as np
 import matplotlib.pyplot as plt
+import csv
 
-f = open('./fitts/result.csv', encoding='utf-8')
-results = csv.reader(f)
-next(results)
+f = open('fitts/result.csv', encoding='utf-8')
+result = csv.reader(f)
+next(result)
 
 ID = []
 MT = []
-
-for row in results:
+for row in result:
     MT.append(row[1])
     ID.append(row[2])
 
-MT_fixed = [f'{float(num):.3f}' for num in MT]
-ID_fixed = [f'{float(num):.3f}' for num in ID]
+x_data = np.array(ID, dtype=float)
+y_data = np.array(MT, dtype=float)
 
-x_sorted, y_sorted = zip(*sorted(zip(ID_fixed, MT_fixed)))
-plt.scatter(x_sorted, y_sorted)
-
-plt.title('SCATTER')
+plt.scatter(x_data, y_data, label='Data')
 plt.xlabel('ID')
-plt.ylabel('MT (ms)')
-plt.xticks(rotation=45)
-plt.locator_params(axis='x', nbins=8)
-plt.subplots_adjust(bottom=0.15, left=0.15)
+plt.ylabel('MT(ms)')
+plt.title('Scatter')
 
-
-# 散布図をpngで保存
-plt.savefig('./fitts/scatter.png')
+plt.savefig('fitts/scatter.png', dpi=300, bbox_inches='tight')
+plt.show()
 
 f.close()
-plt.show()
